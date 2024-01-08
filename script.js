@@ -3,7 +3,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 const playGame = () => {
-    for (let i = 0; i < 5; i++) {
         let choices = Math.floor(Math.random() * 3) + 1;
 
         function getComputerChoice() {
@@ -36,14 +35,9 @@ const playGame = () => {
         console.log(`Computer picks: ${[computerSelection]}`);
 
     }
-}
 
-playGame();
 
-console.log(`Computer: ${computerScore}`);
-console.log(`Player: ${playerScore}`);
 
-alert(`Computer: ${computerScore}\nPlayer: ${playerScore}`)
 
 
 
