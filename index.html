@@ -5,19 +5,20 @@
         <link rel="Stylesheet" href="style.css"/>
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title> 
+        <script src="./script.js" defer></script>
     </head>
 
     <body>
         <header>
             <div class="nav-bar">
                 <div class="left">
-                    <img id="logo" src="#">
+                    <img id="logo" src="./images/R-P-S.png" href="./index.html">
                 </div>
                 <div class="right">
                     <ul>
-                        <li><a href="#">R-P-S</a></li>
+                        <li><a href="./index.html">R-P-S</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Github</a></li>
+                        <li><a href="https://github.com/aurorn">Github</a></li>
                     </ul>
                 </div>
             </div>    
@@ -31,37 +32,37 @@
                 <h3 class="score-message" id="scoreMessage">Whoever gets to 5 points wins</h3>
                 <div class="scores-container">
                   <div class="score-box">
-                    <div class="sign" id="playerSign">?</div>
+                    <div class="choice" id="playerChoice">-</div>
                     <p class="score" id="playerScore">Player: 0</p>
                   </div>
                   <div class="score-box">
-                    <div class="sign" id="computerSign">?</div>
+                    <div class="choice" id="computerChoice">-</div>
                     <p class="score" id="computerScore">Computer: 0</p>
                   </div>
                 </div>
               </div>
               <div class="buttonSelection">
-                  <button class="btn-square" id="rockBtn">
-                    <div class="sign">Rock</div>
+                  <button id="rockBtn">
+                    <div class="choice">Rock</div>
                   </button>
-                  <button class="btn-square" id="paperBtn">
-                    <div class="sign">Paper</div>
+                  <button id="paperBtn">
+                    <div class="choice">Paper</div>
                   </button>
-                  <button class="btn-square" id="scissorsBtn">
-                    <div class="sign">Scissors</div>
+                  <button id="scissorsBtn">
+                    <div class="choice">Scissors</div>
                   </button>
               </div>
             </div>
 
             </div>
           </main>
-          <footer><p>Copyright © <script>document.write(new Date().getFullYear())</script> Samuel Cason</p></footer>
 
-          <div class="modal" id="endgameModal">
-            <p class="modal-title" id="endgameMsg"></p>
-            <button class="btn btn-restart" id="restartBtn">Play again</button>
+          <div class="alert" id="endgameAlert">
+              <p class="alert-title" id="endgameMsg"></p>
+              <button class="btn-restart" id="restartBtn">Play again</button>
           </div>
+
+          <footer><p>Copyright © <script>document.write(new Date().getFullYear())</script> Samuel Cason</p></footer>
           <div class="overlay" id="overlay"></div>
-          <script href="./script.js"></script>
     </body>
 </html>
