@@ -1,10 +1,10 @@
 @font-face {
-    font-family: Roboto;
-    src: url(https://fonts.google.com/specimen/Roboto);
+    font-family: "Roboto";
+    src: url(../odin-recipes/fonts/Roboto-Regular.ttf);
 }
 
 html {
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto";
 }
 
 body {
@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #343535;
 }
 
 header {
@@ -23,10 +24,25 @@ header {
 
 }
 
-#logo {
-    font-size: 24px;
-    color: #F9FAF8;
-}
+main {
+    flex: 1;
+    display: flex;
+    text-align: center;
+ }
+ 
+ .container {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     max-width: 70%;
+     justify-content: center;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+
+
+/* Navigation Bar */
 
 .nav-bar {
     flex: 1;
@@ -45,8 +61,14 @@ header {
     gap: 8px;
 }
 
-#title {
-    color: #F9FAF8
+#logo {
+    height: auto;
+    max-width: 10%;
+    filter: invert(1);
+}
+
+#logo:hover{
+    filter: hue-rotate(180deg);
 }
 
 ul {
@@ -64,3 +86,121 @@ a {
     
 }
 
+
+/* Buttons */
+
+.buttonSelection {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(17, 17, 17);
+    padding: 10px;
+    margin: 4px 8px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: transparent;
+    width: 300px;
+    height: 100px;
+    color:#F9FAF8;
+    font-size: 50px;
+}
+
+button:hover {
+    background-color:rgb(61, 116, 56)
+}
+
+button:active {
+    transform: scale(95%);
+}
+
+
+a:hover {
+    color:rgb(14, 148, 59);
+}
+
+
+/* Scoreboard*/
+
+.scoreboard {
+    color: rgb(173, 229, 178);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 200%;
+
+}
+
+.scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.score-box {
+    width: 200vh;
+}
+
+
+/* end of game alert */
+
+.alert {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #cfcfcf;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .alert.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .alert-title {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .btn-restart {
+    padding: 1% 1%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+  }
+  
+  .overlay.active {
+    display: flex;
+  }
+
+ /* Footer */
+
+  footer {
+    background-color: #1b1c1d;
+    color:#e5e7eb;
+    margin: auto;
+    display: flex;
+    margin: 0;
+    padding: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-top:auto;
+}
